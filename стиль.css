@@ -1,0 +1,33 @@
+.parent {
+  display: flex;
+  gap: 16px;
+  margin: 5em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.text {
+  flex: 1 1 500px;
+  min-width: 500px;
+  text-align: center;
+}
+
+.image {
+  flex: 0 0 auto; /* Картинка не сжимается */
+}
+
+.flexing {
+  flex: 1 1 400px;
+  min-width: 400px;
+}
+
+.item {
+  min-width: 0; /* разрешаем контенту внутри сжиматься */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+img {
+    width: 512px;
+}
