@@ -28,6 +28,10 @@
   white-space: nowrap;
 }
 
+.description {
+    line-height: 2.5;
+}
+
 img {
     width: 512px;
 }
