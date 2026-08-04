@@ -1,3 +1,21 @@
+:root {
+  --bg: white;
+  --text: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: black;
+    --text: white;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+
 .parent {
   display: flex;
   gap: 16px;
@@ -13,7 +31,8 @@
 }
 
 .image {
-  flex: 0 0 auto; /* Картинка не сжимается */
+  flex: 0 0 auto;
+  /* Картинка не сжимается */
 }
 
 .flexing {
@@ -22,16 +41,17 @@
 }
 
 .item {
-  min-width: 0; /* разрешаем контенту внутри сжиматься */
+  min-width: 0;
+  /* разрешаем контенту внутри сжиматься */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .description {
-    line-height: 2.5;
+  line-height: 2.5;
 }
 
 img {
-    width: 512px;
+  width: 512px;
 }
