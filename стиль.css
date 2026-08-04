@@ -1,37 +1,61 @@
+:root {
+  --bg: white;
+  --text: black;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: black;
+    --text: white;
+  }
+}
+
+
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+
+
+
+
 .parent {
+  --gap: 2em;
   display: flex;
-  gap: 16px;
+  gap: var(--gap);
   margin: 5em;
   flex-wrap: wrap;
-  justify-content: center;
+  max-width: 1000px;
+  margin-inline: auto;
 }
 
-.text {
-  flex: 1 1 500px;
-  min-width: 500px;
-  text-align: center;
-}
-
-.image {
-  flex: 0 0 auto; /* Картинка не сжимается */
-}
-
-.flexing {
-  flex: 1 1 400px;
+.parent>* {
+  flex: 1 1 calc((100% - var(--gap)) / 2);
   min-width: 400px;
 }
 
-.item {
-  min-width: 0; /* разрешаем контенту внутри сжиматься */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+
+.flexing {
+  display: flex;
+  gap: var(--gap);
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
+
+.flexing>* {
+  flex: 1;
+  min-width: 200px;
+}
+
+
 
 .description {
-    line-height: 2.5;
+  line-height: 2.5;
 }
 
-img {
-    width: 512px;
+.image img {
+  max-width: 100%;
 }
